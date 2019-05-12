@@ -12,7 +12,8 @@ window.addEventListener('load', function() {
                 return registration.pushManager.subscribe({ userVisibleOnly: true; });
             })
             .then(function (subscription) {
-                console.log('FCM EndPoint is: ' + subscription.endpoint);
+                var endpoint = subscription.endpoint;
+                console.log('FCM EndPoint is: ' + endpoint);
                 var auth = subscription.getKey('auth') 
                     ? btoa(String.fromCharCode.apply(null, new Uint8Array(subscription.getKey('auth'))))
                     : '';
