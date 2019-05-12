@@ -12,7 +12,7 @@ const data = {
 };
 
 const pushSubscription = {
-    pendpoint: data.endpoint,
+    endpoint: data.endpoint,
     keys: {
         auth: data.userAuth,
         p256dh: data.userPublicKey
