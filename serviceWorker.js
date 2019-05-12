@@ -15,7 +15,7 @@ self.addEventListener('push', function(event) {
             body: body,
             icon: './img/icon.png',
             tag: 'push-notification-tag'
-        });
+        })
     );
 });
 
