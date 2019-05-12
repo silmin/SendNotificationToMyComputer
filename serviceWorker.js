@@ -1,10 +1,10 @@
-self.addEventListener('fetch', function(event)) {
+self.addEventListener('fetch', function(event) {
     event.respondWith(
         new Response('[active] service worker');
     );
 });
 
-self.addEventListener('push', function(event)) {
+self.addEventListener('push', function(event) {
     console.log('Received a push message', event);
     
     var title = "push title";
