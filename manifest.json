@@ -4,11 +4,11 @@
     "icons": [
         {
             "src": "./img/icon.png",
-            "sizez": "144x144",
+            "sizez": "100x100",
             "type": "image/png"
         }
     ],
-    "start_url": "/",
+    "start_url": "./",
     "display": "standalone",
     "theme_color": "#282c34"
 }
