@@ -1,0 +1,14 @@
+{
+    "name": "Push Me",
+    "short_name": "Push Me",
+    "icons": [
+        {
+            "src": "./img/icon.png",
+            "sizez": "144x144",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#282c34"
+}
