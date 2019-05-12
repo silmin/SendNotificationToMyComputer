@@ -1,6 +1,6 @@
 self.addEventListener('fetch', function(event) {
     event.respondWith(
-        new Response('[active] service worker');
+        new Response('[active] service worker')
     );
 });
 
