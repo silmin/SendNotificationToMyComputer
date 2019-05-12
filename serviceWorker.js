@@ -10,7 +10,7 @@ self.addEventListener('push', function(event) {
     var title = "push title";
     var body = "push body";
 
-    event.waitUntill(
+    event.waitUntil(
         self.registration.showNotification(title, {
             body: body,
             icon: './img/icon.png',
