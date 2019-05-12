@@ -9,7 +9,7 @@ window.addEventListener('load', function() {
 
         navigator.serviceWorker.ready
             .then(function (registration) {
-                return registration.pushManager.subscribe({ userVisibleOnly: true; });
+                return registration.pushManager.subscribe({ userVisibleOnly: true });
             })
             .then(function (subscription) {
                 var endpoint = subscription.endpoint;
