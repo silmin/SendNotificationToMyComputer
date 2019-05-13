@@ -10,22 +10,17 @@ self.addEventListener('fetch', event => {
 
 self.addEventListener('push', event => {
     console.log('Received a push message', event);
-    
-    var title = "this is push title";
-    var msg = "this is push message";
 
-    console.log("push event");
+    let {title, msg, icon} = event.data.json();
 
-    event.waitUntil(
-        self.registration.showNotification(title, {
-            body: msg,
-            icon: './img/icon.png',
-            tag: 'push-notification-tag'
-        });
-        self.registration.pushManager.getSubscription().then(subscription => {
-            console.log(subscription);
-        }, err => console.log(err);
-    );
+    self.registration.showNotification(title, {
+        body: msg,
+        icon: icon,
+        tag: 'push-notification-tag'
+    });
+    self.registration.pushManager.getSubscription().then(subscription => {
+        console.log(subscription);
+    }, err => console.log(err));
 });
 
 self.addEventListener('notificationclick', event => {
