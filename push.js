@@ -14,7 +14,7 @@ const subscription = require('./subscription.json');
 const icon = './img/icon.png';
 const params = {
     title: 'This is Push!',
-    msg: 'This is msg,
+    msg: 'This is msg',
     icon: icon
 };
 
