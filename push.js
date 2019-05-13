@@ -2,7 +2,7 @@
 
 const push = require('web-push');
 
-const GCM_API_KEY = 'AIzaSyDDTUZzzAUqX3dg0J2Rong3IK0s9pyBRj4';
+const GCM_API_KEY = '**GCM_API_KEY**';
 push.setGCMAPIKey(GCM_API_KEY);
 
 const data = {
