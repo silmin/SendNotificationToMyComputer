@@ -6,18 +6,18 @@ const GCM_API_KEY = 'AIzaSyDDTUZzzAUqX3dg0J2Rong3IK0s9pyBRj4';
 push.setGCMAPIKey(GCM_API_KEY);
 
 const data = {
-    'endpoint': 'https://fcm.googleapis.com/fcm/send/dQlqh1Fq6HY:APA91bHKQWmhaN0f-DIgyUJz2XPXlEkbRCaRSW_mmO1kIQmh8qh6tB5n5PoVM7q97FDMeMrNSA1OwLes7T3K9M4Y0hlINdeEBIgWRyRIBP9ZYo2cyMoCI21jOS_lfMVbOHlh9Ljs2OVC',
-    'userAuth': '7aI+EM+f2xo8Tln9CqbXoQ==',
-    'userPublicKey': 'BBcKSr4mmSgJc/BFIN3RtlCAtSm+7gewje/vEgxqheSpToiqwEatAMKFTIrQIBEZUHTtQ2DJt9f+cKGs7PJz+50='
+    'endpoint': 'https://fcm.googleapis.com/fcm/send/dXmJcdCHy-Q:APA91bHa_m2O-H99LZ_Ss7sBbv081n7TFCPqOqgohOJUzdjJFpkZzmXdQM-m7UWCVlNLKzwhS1KrZC-r7zUcKEqzGqWVTDUq6UwSw5TofofhVDkkefz8-X8dMJrb0q7_Am5FZHTf07Lq',
+    'userAuth': 'CYSNaBq8onvp8j6Un0CQ8Q==',
+    'userPublicKey': 'BJ+RMaDBV3NQqsllol/UN2iU61XgWvfTXRfL7oxRU0OVfzlgG7Ur4pa/facMiPxJopolMr8WVVNsZFZgXwO73aQ='
 };
 
 const pushSubscription = {
-    pendpoint: data.endpoint,
+    endpoint: data.endpoint,
     keys: {
         auth: data.userAuth,
         p256dh: data.userPublicKey
     }
-};
+}
 
 push.sendNotification(pushSubscription, "Hi! I'm push.js")
     .then(function(result) {
