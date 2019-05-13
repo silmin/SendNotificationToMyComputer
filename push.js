@@ -2,7 +2,7 @@
 
 const webpush = require('web-push');
 
-const keys = require('./applicatin-server-keys.json');
+const keys = require('./application-server-keys.json');
 webpush.setVapidDetails(
     "mailto:silvestmint@gmail.com",
     keys.publicKey,
