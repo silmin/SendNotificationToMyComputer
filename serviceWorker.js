@@ -16,11 +16,15 @@ self.addEventListener('push', event => {
     self.registration.showNotification(title, {
         body: msg,
         icon: icon,
-        tag: 'push-notification-tag'
+        tag: 'push-me'
     });
     self.registration.pushManager.getSubscription().then(subscription => {
         console.log(subscription);
-    }, err => console.log(err));
+        return;
+    }, err => {
+        console.log(err));
+        return;
+    }
 });
 
 self.addEventListener('notificationclick', event => {
