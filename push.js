@@ -9,7 +9,7 @@ webpush.setVapidDetails(
     keys.privateKey
 );
 
-const subscription = require('./subscription.json');
+const subscribers = require('./subscription.json');
 
 const icon = './img/icon.png';
 const params = {
@@ -18,7 +18,9 @@ const params = {
     icon: icon
 };
 
-webpush.sendNotification(subscription, JSON.stringify(params))
+Promise.all(subscribers.map(subscription => {
+    return webpush.sendNotification(subscription, JSON.stringify(params), {});
+}))
 .then(res => {
     console.log("Success!");
     console.log(res);
