@@ -1,4 +1,5 @@
 window.addEventListener('load', () => {
+    console.log('hi');
     if (!('serviceWorker' in navigator)) {
         console.log('This browser does not support ServiceWorker.')
         return;
@@ -22,7 +23,7 @@ window.addEventListener('load', () => {
 
         return navigator.serviceWorker.ready;
     })
-    .then(ServiceWorkerRegistration => {
+    .then(serviceWorkerRegistration => {
         return serviceWorkerRegistration.pushManager.getSubscription();
     })
     .then(subscription => {
@@ -45,8 +46,7 @@ window.addEventListener('load', () => {
     })
     .then(subscription => {
         const subscription_json = subscription.toJSON();
-        const fs = require('fs');
-        fs.writeFile('subscription.json', subscription_json);
+        //fs.writeFile('subscription.json', subscription_json);
         console.log(subscription_json);
     });
 });

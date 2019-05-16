@@ -18,7 +18,7 @@ const params = {
     icon: icon
 };
 
-push.sendNotification(subscription, "Hi! I'm push.js")
+webpush.sendNotification(subscription, JSON.stringify(params))
 .then(res => {
     console.log("Success!");
     console.log(res);

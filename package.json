@@ -4,6 +4,9 @@
   "description": "僕のスマホやらPCやらに任意の文字列の通知を送り付けられるWebアプリ",
   "main": "push.js",
   "dependencies": {
+    "browserify": "^16.2.3",
+    "browserify-fs": "^1.0.0",
+    "fs": "0.0.1-security",
     "node.js": "^0.0.0",
     "web-push": "^3.3.4"
   },
