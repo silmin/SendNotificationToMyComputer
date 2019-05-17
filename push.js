@@ -2,14 +2,14 @@
 
 const webpush = require('web-push');
 
-const keys = require('./application-server-keys.json');
+const keys = require('./register/application-server-keys.json');
 webpush.setVapidDetails(
     "mailto:silvestmint@gmail.com",
     keys.publicKey,
     keys.privateKey
 );
 
-const subscribers = require('./subscription.json');
+const subscribers = require('./register/subscription.json');
 
 let title, msg;
 if (3 <= process.argv.length) title = process.argv[2];
