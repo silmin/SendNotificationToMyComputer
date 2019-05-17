@@ -18,7 +18,7 @@ else title = 'Sample title';
 if (4 <= process.argv.length) msg = process.argv[3];
 else msg = 'Sample message';
 
-const icon = './img/icon.png';
+const icon = '../img/icon.png';
 
 const params = {
     title: title,
