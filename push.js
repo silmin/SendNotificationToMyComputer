@@ -11,10 +11,18 @@ webpush.setVapidDetails(
 
 const subscribers = require('./subscription.json');
 
+let title, msg;
+if (3 <= process.argv.length) title = process.argv[2];
+else title = 'Sample title';
+
+if (4 <= process.argv.length) msg = process.argv[3];
+else msg = 'Sample message';
+
 const icon = './img/icon.png';
+
 const params = {
-    title: 'This is Push!',
-    msg: 'This is msg',
+    title: title,
+    msg: msg,
     icon: icon
 };
 
