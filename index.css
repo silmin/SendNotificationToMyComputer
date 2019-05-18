@@ -32,5 +32,9 @@ body{
 }
 
 .my-input {
-    margin: 5 0;
+    margin: 10 0;
+}
+
+.my-button {
+    margin: 15 0;
 }
