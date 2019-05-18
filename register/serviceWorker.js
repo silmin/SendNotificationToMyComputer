@@ -13,10 +13,21 @@ self.addEventListener('push', event => {
 
     let {title, msg, icon} = event.data.json();
 
+    let now = new Date();
+    let year = now.getFullYear();
+    let month = now.getMonth()+1;
+    let day = get.date();
+    let hour = get.Hour();
+    let minute = getMinutes();
+    let sec = getSeconds();
+    let millisec = getMilliseconds();
+
+    let tag = year+"/"+month+"/"+day+"_"+hour+":"+minute+":"+sec+"."+millisec;
+
     self.registration.showNotification(title, {
         body: msg,
         icon: icon,
-        tag: 'push-me'
+        tag: tag
     });
     self.registration.pushManager.getSubscription().then(subscription => {
         console.log(subscription);
