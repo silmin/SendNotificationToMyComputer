@@ -1,12 +1,23 @@
 <html>
 <head>
     <title>push-me</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
+    <link rel="stylesheet" type="text/css" href="./index.css" />
 </head>
+<body>
+<div class="outer-form">
+<form action="./getData.php" method="post" class="outer-form">
+    <fieldset class="uk-fieldset my-field">
 
-<form action="./getData.php" method="post">
-    <input type="text" name="title" maxlength="50" placeholder="Title">
-    <input type="text" name="msg" maxlength="256" placeholder="Message">
-    <input type="submit" value="push">
+        <legend class="uk-legend my-legend">Push Me!</legend>
+
+        <div class="uk-margin">
+            <input class="uk-input my-input" type="text" name="title" maxlength="50" placeholder="Title">
+            <input class="uk-input my-input" type="text" name="msg" maxlength="256" placeholder="Message">
+        </div>
+        <input class="uk-button uk-button-primary" type="submit" value="push">
+    </fieldset>
 </form>
+</div>
+</body>
 </html>

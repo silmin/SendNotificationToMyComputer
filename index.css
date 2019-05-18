@@ -1,0 +1,36 @@
+body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #222222;
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.outer-form {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+.my-field {
+    text-align: center;
+    color: #f6fbf6;
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+.my-legend {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    vertical-align: middle;
+}
+
+.my-input {
+    margin: 5 0;
+}
